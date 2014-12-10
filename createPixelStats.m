@@ -31,7 +31,7 @@ Many methods must be faster, including GPUs.
 %}
 
 function [mins, maxes, totals, hists, count] = createPixelStats(path, fileList)
-    %minimum brightness threshold
+%minimum brightness threshold
     thresh = 2.5*10^7;
 
     % read list of images
@@ -52,7 +52,7 @@ function [mins, maxes, totals, hists, count] = createPixelStats(path, fileList)
     maxes = zeros(imSize, 'uint8');
     totals = zeros(imSize, 'uint64');
 
-% todo this should be [imSize(1), imSize(2), 256, imSize(3)]
+    % todo this should be [imSize(1), imSize(2), 256, imSize(3)]
     hists = zeros([256 imSize], 'uint32');
     
     rows = uint32(size(image,1));
